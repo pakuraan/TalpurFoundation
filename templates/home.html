@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-x-hidden">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  </head>
+  <body class="w-full min-h-screen overflow-x-hidden">
+    <!-- Navbar -->
+    <nav class="w-full bg-[#A17E46] p-4">
+      <div class="flex items-center justify-between">
+        <a href="#" class="text-white text-2xl font-bold">TFP</a>
+
+        <div class="hidden md:flex items-center space-x-6 pl-32">
+          <a href="#" class="text-white hover:text-gray-200 text-sm">Home</a>
+          <a href="#" class="text-white hover:text-gray-200 text-sm">History</a>
+          <a href="#" class="text-white hover:text-gray-200 text-sm"
+            >Leadership</a
+          >
+          <a href="#" class="text-white hover:text-gray-200 text-sm"
+            >Historical Sites</a
+          >
+          <a href="#" class="text-white hover:text-gray-200 text-sm"
+            >Documentaries</a
+          >
+          <a href="#" class="text-white hover:text-gray-200 text-sm">Events</a>
+        </div>
+
+        <div class="flex items-center">
+          <div class="relative hidden sm:block">
+            <input
+              type="text"
+              class="w-64 px-4 py-2 pr-10 rounded-full focus:outline-none bg-[#C4A775] text-white placeholder-white/70"
+              placeholder="Search..."
+            />
+            <svg
+              class="h-5 w-5 absolute right-3 top-1/2 transform -translate-y-1/2 text-white/70"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15.5 15.5L19 19m-5.5-3.5A7.5 7.5 0 1110 2a7.5 7.5 0 010 15z"
+              />
+            </svg>
+          </div>
+
+          <button
+            class="md:hidden text-white focus:outline-none ml-4"
+            onclick="toggleMenu()"
+          >
+            <svg
+              class="h-6 w-6"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              id="menu-icon"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden mt-4">
+        <a href="#" class="block text-white hover:text-gray-200 py-2">Home</a>
+        <a href="#" class="block text-white hover:text-gray-200 py-2"
+          >History</a
+        >
+        <a href="#" class="block text-white hover:text-gray-200 py-2"
+          >Leadership</a
+        >
+        <a href="#" class="block text-white hover:text-gray-200 py-2"
+          >Historical Sites</a
+        >
+        <a href="#" class="block text-white hover:text-gray-200 py-2"
+          >Documentaries</a
+        >
+        <a href="#" class="block text-white hover:text-gray-200 py-2">Events</a>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      class="w-full min-h-[calc(100vh-4rem)] flex items-center justify-center text-center p-4 bg-cover bg-center"
+      style="background-image: url('./static/Images/testing.png')"
+    >
+      <div class="max-w-4xl bg-white/70 p-8 rounded-lg">
+        <h1 class="text-5xl font-bold text-[#987B51] mb-6">
+          Introduction of Talpur Dynasty
+        </h1>
+        <p class="text-gray-600 text-lg mb-8">
+          The Talpur Mirs, who ruled Sindh from 1783 to 1843 AD, were known for
+          their strong leadership, cultural contributions, and commitment to
+          enhancing the community. Mir Fateh Ali Khan Talpur, the founder of the
+          dynasty, helped unite Sindh by defeating the Kalhoras and establishing
+          a dynasty that thrived on social cohesion, art, and literature. Much
+          like the Talpur rulers, who supported the flourishing of Sindhi
+          poetry, architecture, and religious practices, the Talpur Foundation
+          carries forward this legacy by organizing cultural programs and social
+          events aimed at bringing people together.
+        </p>
+        <button
+          class="bg-[#987B51] text-white px-8 py-3 rounded hover:bg-[#876A40] transition-colors"
+        >
+          Contact Us
+        </button>
+      </div>
+    </section>
+
+    <!-- Upcoming Events -->
+    <section class="container mx-auto px-4 py-12 grid md:grid-cols-2 gap-8">
+      <div class="space-y-8">
+        <div class="space-y-4">
+          <h2 class="text-3xl font-semibold text-[#A17E46]">Upcoming Events</h2>
+          <p class="text-gray-600">
+            The Talpur Foundation is committed to making a meaningful difference
+            through impactful community initiatives. Our upcoming projects
+            include large-scale plantation drives in Hyderabad to foster a
+            greener, more sustainable environment. We are also dedicated to
+            raising funds for building schools, ensuring that quality education
+            reaches those who need it most. Beyond education and sustainability,
+            we will organize social events to strengthen community bonds and
+            host programs that celebrate the legacy of the Talpur dynasty,
+            preserving its rich history and cultural heritage. At our core, we
+            believe in uplifting the less fortunate, turning compassion into
+            action, and building a future where opportunity and dignity are
+            within everyone`s reach.
+          </p>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-6">
+          <div class="space-y-3">
+            <div
+              class="w-12 h-12 bg-[#A17E46]/10 rounded-lg flex items-center justify-center"
+            >
+              <svg
+                class="w-6 h-6 text-[#A17E46]"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M8 7v4m8-4v4m-9 4h10m-5 5h1m-6 0h1m-5-5h14M5 7h14a2 2 0 012 2v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9a2 2 0 012-2z"
+                />
+              </svg>
+            </div>
+            <h3 class="text-xl font-medium text-[#A17E46]">Talpur Melo</h3>
+            <p class="text-sm text-gray-600"></p>
+          </div>
+          <!-- <div class="space-y-3">
+            <div
+              class="w-12 h-12 bg-[#A17E46]/10 rounded-lg flex items-center justify-center"
+            >
+              <svg
+                class="w-6 h-6 text-[#A17E46]"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M8 7v4m8-4v4m-9 4h10m-5 5h1m-6 0h1m-5-5h14M5 7h14a2 2 0 012 2v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9a2 2 0 012-2z"
+                />
+              </svg>
+            </div>
+            <h3 class="text-xl font-medium text-[#A17E46]">Title Goes Here</h3>
+            <p class="text-sm text-gray-600">Lorem ipsum dolor sit amet...</p>
+          </div> -->
+        </div>
+      </div>
+      <div
+        class="bg-gray-200 rounded-lg min-h-[400px] flex items-center justify-center"
+      >
+        <img src="./static/Images/event.jpg" alt="Event Upcoming" srcset="" />
+      </div>
+    </section>
+
+    <!-- History Section -->
+    <section class="container mx-auto px-4 py-16 space-y-24 mt-10">
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div
+          class="bg-gray-300 aspect-[5/3] rounded-lg flex items-center justify-center bg-cover bg-center"
+          style="background-image: url('./static/Images/testing2.png')"
+        ></div>
+        <div class="space-y-4">
+          <h2 class="text-3xl font-semibold text-[#A17E46]">History</h2>
+          <p class="text-gray-600">
+            From 1783 to 1843 AD, the Talpur Mirs ruled Sindh with a legacy that
+            still resonates today. Rising to power after the decline of the
+            Kalhora dynasty and as the Mughal Empire waned, the Talpurs,
+            ethnically Sindhi-speaking Baloch descendants of Mir Sulaiman Kako
+            Talpurs, established a reign marked by military prowess, cultural
+            renaissance, and architectural innovation. Led by visionary rulers
+            like Mir Fateh Ali Khan Talpur, who secured victory at the Battle of
+            Halani and declared Hyderabad as his capital, their era saw the
+            flourishing of Shia practices, exquisite poetry, and distinctive
+            Talpur-era structures that blend Mughal, Baloch, and local Sindhi
+            influences. Even as internal conflicts eventually led to regional
+            divisions, a branch of the family continued to influence the region
+            as rulers of Khairpur under British suzerainty until their
+            integration into Pakistan in 1955. The Talpur Foundation honors this
+            rich heritage, celebrating a dynasty that not only shaped Sindh's
+            political landscape but also left an indelible mark on its cultural
+            and artistic traditions.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container mx-auto px-4 py-16 space-y-24 mt-10">
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div
+          class="bg-gray-300 aspect-[5/3] rounded-lg flex items-center justify-center bg-cover bg-center"
+          style="background-image: url('./static/Images/testing3.png')"
+        ></div>
+        <div class="space-y-4">
+          <h2 class="text-3xl font-semibold text-[#A17E46]">
+            Historical Sites
+          </h2>
+          <p class="text-gray-600">
+            The Talpur Mirs left a rich legacy in Sindh, particularly through
+            their contributions to architecture and cultural sites. Notable
+            examples include the tombs at Quba Shahdad and Khudabad, which were
+            restored by Mir Fateh Ali Khan Talpur. These tombs, containing the
+            remains of Talpur women and other significant figures, are renowned
+            for their intricate engravings and exceptional craftsmanship.
+            Additionally, the mosques built at Quba Shahdad and Khudabad feature
+            beautiful motifs on their domes and walls, showcasing the fusion of
+            Mughal and Baloch styles with local Sindhi elements. These
+            architectural gems serve as a testament to the Talpurs' commitment
+            to preserving cultural heritage while fostering a deep connection to
+            the land and its people.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Membership Section -->
+    <section
+      class="relative min-h-[600px] bg-[#A17E46]/50 w-full flex items-center justify-center text-center p-4"
+    >
+      <!-- Curved Header -->
+      <div
+        class="absolute top-0 left-0 right-0 h-32 bg-white"
+        style="border-radius: 0 0 100% 100%; transform: scaleX(1.1)"
+      ></div>
+
+      <div class="relative z-10 max-w-4xl mx-auto pt-40 px-4">
+        <h2 class="text-4xl font-light text-[#8B7355] mb-8">
+          Contact & Membership
+        </h2>
+        <p class="mb-12 text-[#8B7355]">
+          We value your interest in our cause and are here to assist you.
+          Whether you have questions about our fundraising efforts, upcoming
+          events, or how to get involved, we'd love to hear from you Join our
+          community of supporters who are passionate about making a real impact
+        </p>
+        <button
+          class="px-6 py-3 bg-[#69532F] text-white rounded hover:bg-[#3C2A21] transition-colors duration-300"
+        >
+          Apply for Membership
+        </button>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-[#A17E46] text-white py-6">
+      <div class="max-w-7xl mx-auto px-4">
+        <!-- Top section with copyright and logo -->
+        <div class="flex justify-between items-center mb-4">
+          <p class="text-sm">&copy; 2023 TFP</p>
+          <div class="text-2xl font-bold">TFP</div>
+        </div>
+        <!-- Divider line -->
+        <div class="w-full h-px bg-white/30 mb-4"></div>
+        <!-- Bottom section with nav and social -->
+        <div class="flex justify-between items-center">
+          <!-- Navigation links -->
+          <div class="flex gap-8">
+            <a href="#" class="text-sm hover:underline">Home</a>
+            <a href="#" class="text-sm hover:underline">About</a>
+            <a href="#" class="text-sm hover:underline">Contact</a>
+          </div>
+          <!-- Social icons -->
+          <div class="flex gap-4">
+            <a href="#" class="hover:opacity-80 transition-opacity">
+              <i class="ph ph-facebook-logo text-xl"></i>
+            </a>
+            <a href="#" class="hover:opacity-80 transition-opacity">
+              <i class="ph ph-linkedin-logo text-xl"></i>
+            </a>
+            <a href="#" class="hover:opacity-80 transition-opacity">
+              <i class="ph ph-twitter-logo text-xl"></i>
+            </a>
+            <a href="#" class="hover:opacity-80 transition-opacity">
+              <i class="ph ph-youtube-logo text-xl"></i>
+            </a>
+            <a href="#" class="hover:opacity-80 transition-opacity">
+              <i class="ph ph-instagram-logo text-xl"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function toggleMenu() {
+        const menu = document.getElementById("mobile-menu");
+        menu.classList.toggle("hidden");
+      }
+    </script>
+  </body>
+</html>
