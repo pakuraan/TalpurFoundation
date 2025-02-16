@@ -29,6 +29,10 @@
         .curved-nav {
             border-radius: 50px;
             background: #212123;
+           
+          
+
+
         }
         .wave-bottom {
             position: relative;
@@ -65,11 +69,11 @@
     <nav class="fixed top-0 left-0 right-0 z-50 px-4 py-3">
         <div class="curved-nav flex justify-between items-center px-6 py-3">
             <a href="#" class="text-white text-2xl font-bold">
-                <img src="./static/Images/logo.png" alt="Talpur Foundation Logo" class="w-auto h-12"/>
+                <img src="/static/Images/logo.png" alt="Talpur Foundation Logo" class="w-auto h-12"/>
             </a>
             <div class="hidden md:flex items-center space-x-6 text-sm">
                 <a href="#home" class="text-white hover:text-gray-200">Home</a>
-                <a href="#history" class="text-white hover:text-gray-200">History</a>
+                <a href="/history" class="text-white hover:text-gray-200">History</a>
                 <a href="#" class="text-white hover:text-gray-200">Leadership</a>
                 <a href="#" class="text-white hover:text-gray-200">Historical Sites</a>
                 <a href="#" class="text-white hover:text-gray-200">Documentaries</a>
@@ -96,7 +100,7 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="absolute top-16 right-0 w-full bg-tfp-dark p-4 rounded-lg hidden flex-col md:hidden transition-all duration-300">
             <a href="#home" class="block text-white hover:text-gray-200 py-2">Home</a>
-            <a href="#history" class="block text-white hover:text-gray-200 py-2">History</a>
+            <a href="/history" class="block text-white hover:text-gray-200 py-2">History</a>
             <a href="#" class="block text-white hover:text-gray-200 py-2">Leadership</a>
             <a href="#" class="block text-white hover:text-gray-200 py-2">Historical Sites</a>
             <a href="#" class="block text-white hover:text-gray-200 py-2">Documentaries</a>
@@ -109,7 +113,7 @@
     <section id="home" class="bg-tfp-brown min-h-screen pt-24 pb-16 px-4 wave-bottom relative">
         <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
             <div class="md:w-2/3 text-tfp-dark px-4 md:px-8 fade-in">
-                <img src="./static/Images/heading.png" alt="Talpur Foundation Logo" class="w-full max-w-[500px] h-auto mb-8" style="margin-top: 50px;"/>
+                <img src="/static/Images/heading.png" alt="Talpur Foundation Logo" class="w-full max-w-[500px] h-auto mb-8" style="margin-top: 50px;"/>
                 <p class="text-lg mt-4 max-w-2xl"style="text-align: justify;">
                     The Talpur Mirs, who ruled Sindh from 1783 to 1843 AD, were known for their strong leadership, cultural contributions, and commitment to enhancing the community. Mir Fateh Ali Khan Talpur, the founder of the dynasty, helped unite Sindh by defeating the Kalhoras and establishing a dynasty that thrived on social cohesion, art, and literature. Much like the Talpur rulers, who supported the flourishing of Sindhi poetry, architecture, and religious practices, the Talpur Foundation carries forward this legacy by organizing cultural programs and social events aimed at bringing people together.
                 </p>
@@ -118,7 +122,7 @@
                 </button>
             </div>
             <div class="md:w-1/3 hidden md:block">
-                <img src="./static/Images/sword.png" alt="Decorative sword" class="w-auto h-96 mx-auto mt-20"/>
+                <img src="/static/Images/sword.png" alt="Decorative sword" class="w-auto h-96 mx-auto mt-20"/>
             </div>
         </div>
     </section>
@@ -127,8 +131,8 @@
     <section id="events" class="container mx-auto px-4 py-12 fade-in">
       <div class="flex flex-col md:flex-row items-start mb-20 gap-8">
         <div class="md:w-1/3">
-            <img src="./static/Images/history1.jpg" 
-                 alt="Historical Building"
+            <img src="/static/Images/history1.jpg" 
+                 alt="Upcoming Events"
                  class="vintage-image w-full aspect-square object-cover rounded-lg sepia"/>
         </div>
         <div class="md:w-2/3 relative">
@@ -148,7 +152,7 @@
     <!-- History Section -->
     <section id="history" class="container mx-auto px-4 py-16 space-y-24 mt-10 fade-in">
         <div class="grid md:grid-cols-2 gap-8 items-center">
-            <div class="bg-gray-300 aspect-[5/3] rounded-lg flex items-center justify-center bg-cover bg-center" style="background-image: url('./static/Images/history2.jpg')"></div>
+            <div class="bg-gray-300 aspect-[5/3] rounded-lg flex items-center justify-center bg-cover bg-center" style="background-image: url('/static/Images/history2.jpg')"></div>
             <div class="space-y-4">
                 <h2 class="text-3xl font-semibold text-tfp-brown heading-underline">History</h2>
                 <p class="text-white" style="text-align: justify;">
@@ -160,7 +164,7 @@
  
     <section class="container mx-auto px-4 py-16 space-y-24 mt-10 fade-in">
         <div class="grid md:grid-cols-2 gap-8 items-center">
-            <div class="bg-gray-300 aspect-[5/3] rounded-lg flex items-center justify-center bg-cover bg-center" style="background-image: url('./static/Images/site1.jpg')"></div>
+            <div class="bg-gray-300 aspect-[5/3] rounded-lg flex items-center justify-center bg-cover bg-center" style="background-image: url('/static/Images/site1.jpg')"></div>
             <div class="space-y-4">
                 <h2 class="text-3xl font-semibold text-tfp-brown heading-underline">Historical Sites</h2>
                 <p class="text-white" style="text-align: justify;">
@@ -189,7 +193,7 @@
             <!-- Top section with copyright and logo -->
             <div class="flex justify-between items-center mb-4">
                 <p class="text-sm">&copy; 2023 TFP</p>
-                <div class="text-2xl font-bold"><img src="./static/Images/logo.png" alt="Talpur Foundation Logo" class="w-auto h-12"/>
+                <div class="text-2xl font-bold"><img src="/static/Images/logo.png" alt="Talpur Foundation Logo" class="w-auto h-12"/>
                 </div>
             </div>
             <!-- Divider line -->
