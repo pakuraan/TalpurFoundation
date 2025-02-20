@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Talpur Foundation Pakistan - Home</title>
+    <link rel="shortcut icon" href="/static/favicon/favicon.ico" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "tfp-brown": "#cc9567",
+              "tfp-dark": "#212123",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      .fade-in {
+        animation: fadeIn 1s ease-in;
+      }
+      .curved-nav {
+        border-radius: 50px;
+        background: #212123;
+      }
+      .wave-bottom {
+        position: relative;
+      }
+      .wave-bottom::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        background: #212123;
+        clip-path: polygon(100% 0, 0 100%, 100% 100%);
+      }
+      .heading-underline {
+        position: relative;
+        padding-bottom: 10px;
+      }
+      .heading-underline::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 60px;
+        height: 2px;
+        background-color: #e9e3de;
+      }
+    </style>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  </head>
+  <body class="bg-tfp-dark text-white">
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 px-4 py-3">
+      <div class="curved-nav flex justify-between items-center px-6 py-3">
+        <a href="#" class="text-white text-2xl font-bold">
+          <img
+            src="/static/Images/logo.png"
+            alt="Talpur Foundation Logo"
+            class="w-auto h-12"
+          />
+        </a>
+        <div class="hidden md:flex items-center space-x-6 text-sm">
+          <a href="/home" class="text-white hover:text-gray-200">Home</a>
+          <a href="history" class="text-white hover:text-gray-200">History</a>
+
+          <a href="/sites" class="text-white hover:text-gray-200"
+            >Historical Sites</a
+          >
+
+          <a href="/leadership" class="text-white hover:text-gray-200"
+            >Leadership</a
+          >
+        </div>
+
+        <div class="flex items-center">
+          <div class="relative hidden sm:block">
+            <input
+              type="text"
+              class="w-64 px-4 py-2 pr-10 rounded-full focus:outline-none bg-tfp-brown text-white placeholder-white/70"
+              placeholder="Search..."
+            />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="absolute right-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-white/70"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M21 21l-4.35-4.35M17 10A7 7 0 1010 17 7 7 0 0017 10z"
+              />
+            </svg>
+          </div>
+
+          <button onclick="toggleMenu()" class="md:hidden block text-white">
+            ☰
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="absolute top-16 right-0 w-full bg-tfp-dark p-4 rounded-lg hidden flex-col transition-all duration-300"
+      >
+        <a href="#home" class="block text-white hover:text-gray-200 py-2"
+          >Home</a
+        >
+        <a href="history.html" class="block text-white hover:text-gray-200 py-2"
+          >History</a
+        >
+
+        <a href="/leadership" class="block text-white hover:text-gray-200 py-2"
+          >Leadership</a
+        >
+        <a href="/sites" class="block text-white hover:text-gray-200 py-2"
+          >Historical Sites</a
+        >
+      </div>
+    </nav>
+
+    <section
+      class="w-full min-h-[calc(100vh-4rem)] bg-[#CC9567] flex items-center px-4 sm:px-6 mt-[6rem]"
+    >
+      <div
+        class="container mx-auto flex flex-col md:flex-row items-center justify-between"
+      >
+        <!-- Text Section (Takes most of the space) -->
+        <div class="md:w-4/5 lg:w-5/6 text-center md:text-left">
+          <h1 class="text-black font-bold">
+            <div
+              class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight"
+            >
+              Talpur Foundation Leadership
+            </div>
+          </h1>
+          <p
+            class="mt-4 sm:mt-6 text-white text-base sm:text-lg leading-relaxed"
+          >
+            The Talpur Foundation is led by a dedicated team committed to social
+            development, education, and community welfare. Under visionary
+            leadership, the foundation focuses on empowering underprivileged
+            communities through various initiatives, including education,
+            healthcare, and skill development. Their leadership ensures
+            strategic planning, effective resource allocation, and sustainable
+            impact, driving positive change for a better future.
+          </p>
+        </div>
+
+        <!-- Image Section (Super Small & Hidden on Mobile/Tablet) -->
+        <div class="hidden sm:hidden md:block mt-6 md:mt-0 md:ml-4">
+          <img
+            src="/static/Images/sword.png"
+            alt="example"
+            class="w-full max-w-[80px] lg:max-w-[100px]"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="container mx-auto px-4 py-8">
+      <h2 class="text-xl font-semibold text-[#A17E46] mb-8">
+        Our Mission and Vision
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 justify-center">
+        <div class="text-center">
+          <!-- <div
+            class="bg-gray-200 overflow-hidden mx-auto w-full md:w-[517.19px] h-[200px] md:h-[410px]"
+          >
+            <img
+              src="/placeholder.svg"
+              alt="Mission"
+              class="w-full h-full object-cover"
+            />
+          </div> -->
+          <h3 class="text-lg font-medium text-[#A17E46] mt-4">Mission</h3>
+          <p class="text-sm text-white leading-relaxed mt-2">
+            The Talpur Foundation is dedicated to preserving the rich cultural
+            heritage of the Talpur Dynasty while actively working towards a more
+            educated, united, and sustainable society. Our mission is to promote
+            education by building schools and providing scholarships, protect
+            Sindhs historical legacy through restoration and cultural events,
+            support social welfare initiatives for marginalized communities, and
+            lead environmental efforts such as plantation drives
+          </p>
+        </div>
+
+        <div class="text-center">
+          <!-- <div
+            class="bg-gray-200 overflow-hidden mx-auto w-full md:w-[517.19px] h-[200px] md:h-[410px]"
+          >
+            <img
+              src="/placeholder.svg"
+              alt="Vision"
+              class="w-full h-full object-cover"
+            />
+          </div> -->
+          <h3 class="text-lg font-medium text-[#A17E46] mt-4">Vision</h3>
+          <p class="text-sm text-white leading-relaxed mt-2">
+            We envision a future where history and progress go hand in hand,
+            where every individual has access to education, communities thrive
+            in unity, and sustainability remains a priority. By upholding the
+            values of leadership, generosity, and resilience that defined the
+            Talpur rulers, we strive to create a lasting impact for generations
+            to come.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container mx-auto px-4 py-8">
+      <h2 class="text-xl font-semibold text-[#A17E46] mb-8">Team Members</h2>
+
+      <h2 class="text-xl font-semibold text-[#A17E46] mb-8">Tenure 1</h2>
+
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
+      >
+        <div class="flex flex-col items-center text-center">
+          <div class="w-full max-w-sm aspect-[4/3] bg-gray-200 overflow-hidden">
+            <img
+              src="/static/Images/amanullah_sec1.jpg"
+              alt="Project Title 1"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <h3 class="text-lg font-medium text-[#A17E46] mt-4">
+            Mir Amanullah Talpur
+          </h3>
+          <p class="text-sm text-white leading-relaxed px-4">Chairman 1</p>
+        </div>
+
+        <div class="flex flex-col items-center text-center">
+          <div class="w-full max-w-sm aspect-[4/3] bg-gray-200 overflow-hidden">
+            <img
+              src="/static/Images/nawab_sec1.jpg"
+              alt="Project Title 2"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <h3 class="text-lg font-medium text-[#A17E46] mt-4">
+            Nawab Farman Talpur
+          </h3>
+          <p class="text-sm text-white leading-relaxed px-4">Secretory 1</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container mx-auto px-4 py-8">
+      <h2 class="text-xl font-semibold text-[#A17E46] mb-8">Tenure 2</h2>
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
+      >
+        <div class="flex flex-col items-center text-center">
+          <div class="w-full max-w-sm aspect-[4/3] bg-gray-200 overflow-hidden">
+            <img
+              src="/static/Images/muhammadKhan_chairman2.jpg"
+              alt="Project Title 1"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <h3 class="text-lg font-medium text-[#A17E46] mt-4">
+            Muhammad Khan Talpur
+          </h3>
+          <p class="text-sm text-white leading-relaxed px-4">Chairman 2</p>
+        </div>
+
+        <div class="flex flex-col items-center text-center">
+          <div class="w-full max-w-sm aspect-[4/3] bg-gray-200 overflow-hidden">
+            <img
+              src="/static/Images/Mushtak_sec2.jpg"
+              alt="Project Title 2"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <h3 class="text-lg font-medium text-[#A17E46] mt-4">
+            Mir Mushtak Talpur
+          </h3>
+          <p class="text-sm text-white leading-relaxed px-4">Secretory 2</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container mx-auto px-4 py-8">
+      <h2 class="text-xl font-semibold text-[#A17E46] mb-8">Tenure 3</h2>
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
+      >
+        <div class="flex flex-col items-center text-center">
+          <div class="w-full max-w-sm aspect-[4/3] bg-gray-200 overflow-hidden">
+            <img
+              src="/static/Images/MirEhsanTalpur_chairman3.jpg"
+              alt="Project Title 1"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <h3 class="text-lg font-medium text-[#A17E46] mt-4">
+            Mir Ehsan Talpur
+          </h3>
+          <p class="text-sm text-white leading-relaxed px-4">Chairman 3</p>
+        </div>
+
+        <div class="flex flex-col items-center text-center">
+          <div class="w-full max-w-sm aspect-[4/3] bg-gray-200 overflow-hidden">
+            <img
+              src="/static/Images/mirEjazTalpur.jpg"
+              alt="Project Title 2"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <h3 class="text-lg font-medium text-[#A17E46] mt-4">
+            Mir Ejaz Talpur
+          </h3>
+          <p class="text-sm text-white leading-relaxed px-4">Secretory 3</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- <div
+      class="flex flex-col md:flex-row max-w-3xl mx-auto gap-8 items-center mb-8 pb-8 px-4 sm:px-6 lg:px-8"
+    >
+      <div
+        class="relative w-full md:w-2/3 p-6 sm:p-8 min-h-[200px] flex items-center"
+        style="background-color: #b39b77"
+      >
+        <span
+          class="absolute top-4 right-4 text-white text-4xl sm:text-6xl font-serif"
+          style="line-height: 1"
+        >
+          "&nbsp;&nbsp;"
+        </span>
+        <p
+          class="text-white text-base sm:text-lg z-10 relative text-center md:text-left"
+        >
+          "This is a fantastic service! It has greatly improved my workflow and
+          efficiency. Highly recommended!"
+        </p>
+      </div>
+
+      <div class="flex flex-col items-center gap-2">
+        <div
+          class="w-24 h-24 sm:w-32 sm:h-32 rounded-full bg-gray-200 overflow-hidden"
+        >
+          <img
+            src="/placeholder.svg"
+            alt=""
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <h3 class="font-medium text-lg sm:text-xl" style="color: #b39b77">
+          Mustafa Talpur
+        </h3>
+        <p class="text-xs sm:text-sm" style="color: #b39b77">CEO</p>
+      </div>
+    </div> -->
+
+    <!-- Footer Section -->
+    <footer class="bg-tfp-brown text-white py-6">
+      <div class="max-w-7xl mx-auto px-4">
+        <!-- Top section with copyright and logo -->
+        <div class="flex justify-between items-center mb-4">
+          <p class="text-sm">&copy; 2008 TFP</p>
+          <div class="text-2xl font-bold">
+            <img
+              src="/static/Images/logo.png"
+              alt="Talpur Foundation Logo"
+              class="w-auto h-12"
+            />
+          </div>
+        </div>
+        <!-- Divider line -->
+        <div class="w-full h-px bg-white/30 mb-4"></div>
+        <!-- Bottom section with nav and social -->
+        <div class="flex justify-between items-center">
+          <!-- Navigation links -->
+          <div class="flex gap-8">
+            <a href="/home" class="text-sm hover:underline">Home</a>
+            <a href="/leadership" class="text-sm hover:underline">Leadership</a>
+            <a href="#" class="text-sm hover:underline">Contact</a>
+          </div>
+          <!-- Social icons -->
+          <div class="flex gap-4">
+            <a
+              href="https://www.facebook.com/profile.php?id=61572801676028"
+              class="hover:opacity-80 transition-opacity"
+            >
+              <i class="ph ph-facebook-logo text-xl"></i>
+            </a>
+            <a
+              href="https://www.instagram.com/talpurfoundationpakistan/"
+              class="hover:opacity-80 transition-opacity"
+            >
+              <i class="ph ph-instagram-logo text-xl"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      function toggleMenu() {
+        var menu = document.getElementById("mobile-menu");
+        menu.classList.toggle("hidden");
+      }
+
+      function toggleDropdown(id) {
+        var dropdown = document.getElementById(id);
+        if (dropdown.classList.contains("hidden")) {
+          closeAllDropdowns();
+          dropdown.classList.remove("hidden");
+        } else {
+          dropdown.classList.add("hidden");
+        }
+      }
+
+      function closeAllDropdowns() {
+        document
+          .querySelectorAll(".absolute, .relative .hidden")
+          .forEach((dropdown) => {
+            dropdown.classList.add("hidden");
+          });
+      }
+
+      // Close dropdowns when clicking outside
+      document.addEventListener("click", function (event) {
+        let isDropdownButton = event.target.matches(
+          "[onclick^='toggleDropdown']"
+        );
+        let isInsideDropdown = event.target.closest(".relative");
+        let isMenuButton = event.target.matches("[onclick^='toggleMenu']");
+        let isMobileMenu = event.target.closest("#mobile-menu");
+
+        // Close mobile menu when clicking outside
+        if (!isMenuButton && !isMobileMenu) {
+          document.getElementById("mobile-menu").classList.add("hidden");
+        }
+
+        // Close dropdowns when clicking outside
+        if (!isDropdownButton && !isInsideDropdown) {
+          closeAllDropdowns();
+        }
+      }); // Smooth scroll for navigation links
+      document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute("href")).scrollIntoView({
+              behavior: "smooth",
+            });
+          });
+        });
+
+        // Fade-in animation for sections
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("fade-in");
+              }
+            });
+          },
+          { threshold: 0.1 }
+        );
+
+        document
+          .querySelectorAll(".fade-in-trigger")
+          .forEach((el) => observer.observe(el));
+      });
+    </script>
+  </body>
+</html>
