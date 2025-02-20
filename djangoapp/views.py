@@ -1,14 +1,13 @@
 from django.shortcuts import render
 
 def home(request):
-    return render(request,'home.html')
+    return render(request, "home.html")
 
 def history(request):
-    return render(request,'history.html')
+    return render(request, "history.html")
 
 def leadership(request):
-    return render(request,'leadership.html')
+    return render(request, "leadership.html")
 
 def sites(request):
-    return render(request,'sites.html')
-
+    return render(request, "sites.html")
