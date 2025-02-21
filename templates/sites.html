@@ -66,6 +66,7 @@
   </head>
   <body class="bg-tfp-dark text-white">
     <!-- Navbar -->
+    <!-- Navbar -->
     <nav class="fixed top-0 left-0 right-0 z-50 px-4 py-3">
       <div class="curved-nav flex justify-between items-center px-6 py-3">
         <a href="#" class="text-white text-2xl font-bold">
@@ -78,74 +79,9 @@
         <div class="hidden md:flex items-center space-x-6 text-sm">
           <a href="/" class="text-white hover:text-gray-200">Home</a>
           <a href="/history" class="text-white hover:text-gray-200">History</a>
-
-          <!-- <div class="relative">
-            <button
-              onclick="toggleDropdown('blog-dropdown')"
-              class="text-white hover:text-gray-200"
-            >
-              Blog
-            </button>
-            <div
-              id="blog-dropdown"
-              class="hidden absolute bg-tfp-dark text-white w-48 shadow-lg rounded-md mt-2"
-            >
-              <a href="#" class="block px-4 py-2 hover:bg-gray-700"
-                >Documentaries</a
-              >
-              <a href="#" class="block px-4 py-2 hover:bg-gray-700"
-                >Mission & Vision</a
-              >
-            </div>
-          </div> -->
-
-          <!-- <div class="relative">
-            <button
-              onclick="toggleDropdown('about-dropdown')"
-              class="text-white hover:text-gray-200"
-            >
-              About
-            </button>
-            <div
-              id="about-dropdown"
-              class="hidden absolute bg-tfp-dark text-white w-56 shadow-lg rounded-md mt-2"
-            >
-              <a href="#" class="block px-4 py-2 hover:bg-gray-700"
-                >Talpur Historical Site</a
-              >
-              <a href="#" class="block px-4 py-2 hover:bg-gray-700"
-                >Talpur Dynasty</a
-              >
-              <a href="#" class="block px-4 py-2 hover:bg-gray-700"
-                >Talpur Foundation Leadership</a
-              >
-            </div>
-          </div> -->
-
-          <!-- <div class="relative">
-            <button
-              onclick="toggleDropdown('contact-dropdown')"
-              class="text-white hover:text-gray-200"
-            >
-              Contact
-            </button>
-            <div
-              id="contact-dropdown"
-              class="hidden absolute bg-tfp-dark text-white w-48 shadow-lg rounded-md mt-2"
-            >
-              <a href="#" class="block px-4 py-2 hover:bg-gray-700"
-                >Contact / Membership</a
-              >
-              <a href="#" class="block px-4 py-2 hover:bg-gray-700"
-                >Event & Impacts</a
-              >
-            </div>
-          </div> -->
-
           <a href="/sites" class="text-white hover:text-gray-200"
             >Historical Sites</a
           >
-
           <a href="/leadership" class="text-white hover:text-gray-200"
             >Leadership</a
           >
@@ -186,15 +122,14 @@
         class="absolute top-16 right-0 w-full bg-tfp-dark p-4 rounded-lg hidden flex-col transition-all duration-300"
       >
         <a href="/" class="block text-white hover:text-gray-200 py-2">Home</a>
-        <a href="/history" class="block text-white hover:text-gray-200 py-2"
+        <a href="history.html" class="block text-white hover:text-gray-200 py-2"
           >History</a
-        >
-
-        <a href="/leadership" class="block text-white hover:text-gray-200 py-2"
-          >Leadership</a
         >
         <a href="/sites" class="block text-white hover:text-gray-200 py-2"
           >Historical Sites</a
+        >
+        <a href="/leadership" class="block text-white hover:text-gray-200 py-2"
+          >Leadership</a
         >
       </div>
     </nav>
@@ -640,9 +575,22 @@
     </footer>
     <script>
       function toggleMenu() {
-        var menu = document.getElementById("mobile-menu");
+        const menu = document.getElementById("mobile-menu");
         menu.classList.toggle("hidden");
       }
+
+      // Close mobile menu when clicking outside
+      document.addEventListener("click", function (event) {
+        const menuButton = document.querySelector("[onclick='toggleMenu()']");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        if (
+          !menuButton.contains(event.target) &&
+          !mobileMenu.contains(event.target)
+        ) {
+          mobileMenu.classList.add("hidden");
+        }
+      });
 
       function toggleDropdown(id) {
         var dropdown = document.getElementById(id);
@@ -661,26 +609,6 @@
             dropdown.classList.add("hidden");
           });
       }
-
-      // Close dropdowns when clicking outside
-      document.addEventListener("click", function (event) {
-        let isDropdownButton = event.target.matches(
-          "[onclick^='toggleDropdown']"
-        );
-        let isInsideDropdown = event.target.closest(".relative");
-        let isMenuButton = event.target.matches("[onclick^='toggleMenu']");
-        let isMobileMenu = event.target.closest("#mobile-menu");
-
-        // Close mobile menu when clicking outside
-        if (!isMenuButton && !isMobileMenu) {
-          document.getElementById("mobile-menu").classList.add("hidden");
-        }
-
-        // Close dropdowns when clicking outside
-        if (!isDropdownButton && !isInsideDropdown) {
-          closeAllDropdowns();
-        }
-      });
 
       // Smooth scroll for navigation links
       document.addEventListener("DOMContentLoaded", function () {
